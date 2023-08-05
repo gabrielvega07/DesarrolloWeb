@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi página web</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+</head>
+<body>
+
+    <div class="container"><!-- Image and text -->
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Dropdown
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                  </div>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link disabled" href="#">Disabled</a>
+                </li>
+              </ul>
+              <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+              </form>
+            </div>
+          </nav>
+        </div>
+
+    <h1>Hola, bienvenido a mi página web</h1>
+    <p>Esta es una página de ejemplo.</p>
+
+    <div class="container">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="biography.html">Biografia</a></li>
+              <li class="breadcrumb-item"><a href="front.html">Como ser un desarrollador web</a></li>
+              <li class="breadcrumb-item"><a href="etiquetas.html">Etiquetas</a></li>
+            </ol>
+          </nav>
+    </div>
+
+    <div class="container">
+        <div class="row mt-5">
+            <div class="card" style="width: 25rem;">
+                <img class="card-img-top" src="https://th.bing.com/th/id/R.fa565bae9e0c6bf3756dd9089a591630?rik=cqEylSWvSHJnvA&pid=ImgRaw&r=0" alt="Card image cap">
+                <div class="card-body">
+                  <p class="card-text">Desarrollo Web 2023.</p>
+                </div>
+              </div>
+        </div>
+
+        <nav class="nav flex-column">
+            <a class="nav-link active" href="#">Carpeta compartida</a>
+            <a class="nav-link" href="#">Repo</a>
+            <a class="nav-link" href="#">Video</a>
+            <a class="nav-link disabled" href="#">Pagina (Disabled)</a>
+          </nav>
+
+        <form>
+            <div class="form-group mt-5">
+              <label for="exampleFormControlInput1">Email address</label>
+              <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+            </div>
+            <div class="form-group">
+              <label for="exampleFormControlSelect1">Example select</label>
+              <select class="form-control" id="exampleFormControlSelect1">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="exampleFormControlSelect2">Example multiple select</label>
+              <select multiple class="form-control" id="exampleFormControlSelect2">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="exampleFormControlTextarea1">Example textarea</label>
+              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            </div>
+          </form>
+
+          <ul class="list-group mt-5">
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              Errores en esta página
+              <span class="badge badge-primary badge-pill">99</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              Alertas
+              <span class="badge badge-primary badge-pill">2</span>
+            </li>
+          </ul>
+
+
+        <div class="alert alert-light, mt-5" role="alert">
+            Esta es una alerta. <a href="index.html" class="alert-link">ver</a>.
+          </div>
+
+          <pre><code> Ya se termió la página. 
+            </code></pre>
+    </div>
+</body>
+</html>

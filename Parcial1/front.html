@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Cómo ser un desarrollador web</title>
+<link rel="stylesheet" href="style3.css">
+
+</head>
+<body>
+    <img src="https://pbs.twimg.com/media/Fa6W_QyUIAAX2sX?format=png&name=900x900" alt="Frontend Developer Roadmap">
+
+<h1>Cómo ser un desarrollador web</h1>
+
+<p>Un desarrollador web es un profesional que crea y mantiene sitios web. Utilizan lenguajes de programación como HTML, CSS y JavaScript para crear sitios web que sean visualmente atractivos y fáciles de usar. Los desarrolladores web también pueden ser responsables del desarrollo de funciones web, como formularios de contacto, carritos de compras y galerías de imágenes.</p>
+
+<p>Para ser un desarrollador web, deberá tener una sólida comprensión de los siguientes lenguajes de programación:</p>
+
+<ul>
+  <li>HTML</li>
+  <li>CSS</li>
+  <li>JavaScript</li>
+</ul>
+
+<p>Además de estos lenguajes de programación, los desarrolladores web también deben tener una comprensión de los siguientes conceptos:</p>
+
+<ul>
+  <li>Arquitectura web</li>
+  <li>Diseño web</li>
+  <li>Desarrollo web móvil</li>
+</ul>
+
+<p>Hay varias formas de convertirse en un desarrollador web. Una forma es obtener un título en desarrollo web de una universidad o comunidad. Otra forma es aprender los lenguajes de programación y conceptos de desarrollo web a través de cursos en línea o tutoriales. Una vez que haya aprendido los conceptos básicos del desarrollo web, puede comenzar a construir su propio portafolio de sitios web.</p>
+
+<p>Las perspectivas de empleo para los desarrolladores web son excelentes. Se proyecta que la demanda de desarrolladores web aumente un 27% de 2020 a 2030, mucho más rápido que el promedio de todas las ocupaciones. Este crecimiento se debe a la creciente popularidad de Internet y la necesidad de sitios web que sean atractivos, fáciles de usar e interactivos.</p>
+
+<p>Los salarios de los desarrolladores web varían según la ubicación, la experiencia y las habilidades. Sin embargo, los desarrolladores web suelen ganar un buen sueldo. El salario medio anual de un desarrollador web en los Estados Unidos es de $100,140.</p>
+
+<p>Si está interesado en una carrera en desarrollo web, ahora es un buen momento para comenzar. Hay muchas recursos disponibles para ayudarlo a aprender los lenguajes de programación y conceptos de desarrollo web. Con trabajo duro y dedicación, puede convertirse en un desarrollador web exitoso.</p>
+
+<form action="/" method="post">
+  <input type="text" name="nombre" placeholder="Ingresa tu nombre">
+  <input type="submit" value="Enviar">
+</form>
+
+<script>
+function saludar() {
+  alert("Hola, " + document.getElementById("nombre").value);
+}
+</script>
+
+<div id="contenido"></div>
+
+<script>
+function cargarContenido() {
+  var xhr = new XMLHttpRequest();
+  xhr.open("GET", "/contenido.html");
+  xhr.onload = function() {
+    if (xhr.status === 200) {
+      var contenido = xhr.responseText;
+      div.innerHTML = contenido;
+    } else {
+      alert("Hubo un error al cargar el contenido");
+    }
+  };
+  xhr.send();
+}
+</script>
+
+<button onclick="cargarContenido()">Cargar contenido</button>
+
+<h2>Material de apoyo</h2>
+<div class="video-container">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/-_X6PhkjpzU" frameborder="0" allowfullscreen></iframe>
+  </div>
+</body>
+</html>

@@ -1,0 +1,40 @@
+body {
+  font-family: sans-serif;
+  margin: 5;
+  padding: 5;
+    background-image: linear-gradient(to right, #0c768e 10%, #e7deb5 100%);
+
+}
+
+h1 {
+  font-size: 2em;
+  margin-top: 0;
+}
+
+p {
+  margin-bottom: 1em;
+}
+
+a {
+  color: #000088;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #0000cc;
+}
+
+img {
+
+  float: left;
+  width: 450px;
+  height: 780px;
+  margin: 20px;
+  padding: 10px;
+
+}
+
+div{
+    margin: 0 auto;
+    padding: 50px;
+}
