@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+    async function fetchUsers(endpoint) {
+        const res = await fetch(endpoint);
+
+        if (!res.ok) {
+            throw new Error(res.status); // 404
+        }
+
+        const data = await res.json();
+        return data;
+    }
+
+    fetchUsers('https://jsonplaceholder.typicode.com/usersZZZ')
+        .then(data => {
+            console.log(data.map(user => user.website));
+        })
+        .catch(err => console.log('Nooo!!!, hay error', err.message));
+</script>
+
+</head>
+<body>
+    
+</body>
+</html>
+

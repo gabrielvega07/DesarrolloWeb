@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SpaceX Launch Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        
+        h1 {
+            text-align: center;
+        }
+        
+        #launch-details {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        #launch-details img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>SpaceX Latest Launch Details</h1>
+    <div id="launch-details"></div>
+
+    <script>
+        const url = 'https://api.spacexdata.com/v5/launches/latest';
+
+        // Obtener los datos de la API
+        fetch(url)
+            .then(respuesta => respuesta.json())
+            .then(datos => {
+                const launchDetailsContainer = document.getElementById('launch-details');
+
+                // Crear elementos HTML para mostrar los detalles del lanzamiento
+                const launchDetails = `
+                    <h2>${datos.name}</h2>
+                    <p><strong>Fecha:</strong> ${datos.date_utc}</p>
+                    <p><strong>Número de vuelo:</strong> ${datos.flight_number}</p>
+                    <p><strong>Rocket:</strong> ${datos.rocket}</p>
+                    <p><strong>Detalles:</strong> ${datos.details || 'No hay detalles disponibles.'}</p>
+                    <p><strong>Enlace al video del lanzamiento:</strong> <a href="${datos.webcast}" target="_blank">Ver video</a></p>
+                    <p><strong>Enlace a Wikipedia:</strong> <a href="${datos.wikipedia}" target="_blank">Leer más en Wikipedia</a></p>
+                    <img src="${datos.links.patch.large}" alt="Patch">
+                    <p><strong>Enlace a la imagen del lanzamiento:</strong> <a href="${datos.links.flickr.original[0]}" target="_blank">Ver imagen</a></p>
+                    <p><strong>video del lanzamiento:</strong> <a href="${datos.links.webcast}" target="_blank">Ver video</a></p>                
+
+                `;
+
+                launchDetailsContainer.innerHTML = launchDetails;
+            })
+            .catch(error => {
+                console.error('Error fetching data:', error);
+            });
+    </script>
+</body>
+</html>

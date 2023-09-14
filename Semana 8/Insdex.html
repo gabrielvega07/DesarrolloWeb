@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // function actividad(parametroNombre, parametroActividad){
+        //     console.log("La persona " + parametroNombre + " esta realizando la actividad " + parametroActividad);
+        // }
+
+        // actividad("Juan", "Aprender JavaScript");
+
+        // let viajando = destino => {
+        //     return `viajando a la ciudad de ${destino}`
+        // }
+
+        // let viaje = viajando
+        // console.log(viaje);
+
+
+        // let Aprender =  actividad => {
+        //     return `Aprendiendo ${actividad}`
+        // }
+
+        // let aprendiendo = Aprender
+        // console.log(aprendiendo("JavaScript"));
+
+        // Aprender ();
+
+        // const persona = {
+        //     nombre: "Juan",
+        //     profesion: "Desarrollador Web",
+        //     edad: 21
+        // }
+
+        // console.log(persona.nombre); //ojeto literal
+        // console.log(persona['edad']); //objeto cosntructor
+
+        // function Tarea(nombre, urgencia){
+        //     this.nombre = nombre;
+        //     this.urgencia = urgencia;
+        //     this.costo = costo;
+        //     this.tiempoMinutos = tiempoMinutos;
+        // }
+
+        
+        // Tarea.prototype.mostrarInformacionTarea = function(){
+        //     return `La tarea ${this.nombre} tiene una prioridad de ${this.urgencia} y un costo de ${this.costo} y un tiempo de ${this.tiempoMinutos} minutos`;
+        // }
+
+        // const tarea1 = new Tarea('Aprender JavaScript y React', 'Urgente', 100, 120);
+        // const tarea2 = new Tarea('Pasear al perro', 'Media', 20, 30);
+        // const tarea3 = new Tarea('Conocer a mis suegros', 'Baja', 0, 0);
+
+        // //imprimir nombre de la tarea 1, la urgencia de la tarea 3 y toda la tarea 2
+
+        // // console.log(tarea1.nombre);
+        // // console.log(tarea3.urgencia);
+        // // console.log(tarea2.nombre + " " + tarea2.urgencia);
+
+        // console.log(tarea1.mostrarInformacionTarea());
+        // console.log(tarea2.mostrarInformacionTarea());
+        // console.log(tarea3.mostrarInformacionTarea());
+
+        // const persona = {
+        //     nombre: "Marjorie",
+        //     edad: 23,
+        //     clave: "Marjorie23",
+        //     hobies: ["Correr", "Programar", "Dormir"]
+        // }
+
+        // let {nombre, clave} = persona;
+        // console.log(clave);
+
+        //oabjet literal enancement==================================================
+
+        // const banda = "Metallica";
+        // const genero = "Heavy Metal";
+        // const canciones = ["Master of Puppets", "Seek & Destroy", "Enter Sandman"];
+
+        //  const metalica = {banda, genero, canciones};
+
+        // const persona = {
+        //     nombre: "Juan",
+        //     edad: 21,
+        //     clave: "Juan21",
+        //     mostrarInformacion(){
+        //         console.log(`${this.nombre} ${this.edad} ${this.clave}`);
+        // }};
+
+        // persona.mostrarInformacion();
+
+
+        // let lenguajes = ["JavaScript", "PHP", "Python", "Java", "C#"];
+        // let [ultimo] = [lenguajes].reverse();
+        // let [ultimo2] = [...lenguajes].reverse();
+
+        // console.log(lenguajes);
+
+        // const numeros = [10, 20, 30, 40, 50];
+        //  let mayor = Math.max(...numeros);
+        //     console.log(mayor);
+
+        const personas = [
+            {nombre: "Juan", edad: 21, aprendiendo: "JavaScript"},
+            {nombre: "Pablo", edad: 18, aprendiendo: "PHP"},
+            {nombre: "Alejandra", edad: 24, aprendiendo: "AdobeXD"},
+            {nombre: "Karen", edad: 30, aprendiendo: "Python"},
+            {nombre: "Miguel", edad: 35, aprendiendo: "ReactJS"},
+        ]
+
+        let total = personas.reduce((edadTotal, persona) => {
+            return edadTotal + persona.edad;
+        }, 0);
+        
+        let  promedio = total / personas.length;
+
+        console.log(total);
+        console.log(promedio);
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

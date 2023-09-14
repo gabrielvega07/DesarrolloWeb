@@ -1,0 +1,51 @@
+
+
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejemplo de Ajax</title>
+    
+  </head>
+  <body>
+    <div>
+      <h2>USAR UN SERVIDOR WEB PARA ESTE EJEMPLO</h2>
+      <img src="img/einstein.png" alt="Einstein" />
+
+      <button id="request">Aprender más de esta persona</button>
+      <p>En vez del div, que sugieren?</p>
+      <div id="bio"></div>
+    </div>
+
+    <script>
+    var btn = document.getElementById("request");
+    var bio = document.getElementById("bio");
+
+    var request = new XMLHttpRequest();
+
+    request.onreadystatechange = function () {
+      if (request.readyState === 4) {
+        bio.style.border = "1px solid #e8e8e8";
+        if (request.status === 200) {
+          bio.innerHTML = request.responseText;
+        } else {
+          bio.innerHTML =
+            "Un Error Ocurrió en la peticion: " +
+            request.status +
+            " " +
+            request.statusText;
+        }
+      }
+    };
+
+    request.open("Get", "Bio.txt");
+
+    btn.addEventListener("click", function () {
+      this.style.display = "none";
+      request.send();
+    });
+  </script>
+  </body>
+  
+</html>

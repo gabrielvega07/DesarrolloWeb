@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>POST, PUT DELETE</title>
+    <script>
+        const myPost = {
+            title: 'un post de hechos reales',
+            body: '42',
+            userId: 2
+        }
+
+        const opciones = {
+            method: 'POST',
+            body: JSON.stringify(myPost),
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        };
+
+        fetch('https://jsonplaceholder.typicode.com/posts', opciones)
+            .then(res => res.json())
+            .then(res => console.log(res));
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

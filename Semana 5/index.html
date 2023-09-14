@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ejercicios</title>
+</head>
+<body>
+    <h1>Menú de Ejercicios</h1>
+    <ul>
+        <li><a href="#" onclick="showExercise(1)">1. IMC (Índice de Masa Corporal)</a></li>
+        <li><a href="#" onclick="showExercise(2)">2. Número de Likes</a></li>
+        <li><a href="#" onclick="showExercise(3)">3. Contraseña Válida</a></li>
+        <li><a href="#" onclick="showExercise(4)">4. Cálculo de Impuestos</a></li>
+        <li><a href="#" onclick="showExercise(5)">5. Imprimir un Arreglo</a></li>
+        <li><a href="#" onclick="showExercise(6)">6. Número de Caracteres</a></li>
+        <li><a href="#" onclick="showExercise(7)">7. Sumar Arreglo</a></li>
+        <li><a href="#" onclick="showExercise(8)">8. Multiplicar Arreglo</a></li>
+        <li><a href="#" onclick="showExercise(9)">9. Sumar Arreglo entre Rango</a></li>
+        <li><a href="#" onclick="showExercise(10)">10. Encontrar el número máximo (con y sin Math.max)</a></li>
+    </ul>
+
+    <div id="exercise-container">
+        <!-- Contenedor de ejercicios vacío -->
+    </div>
+
+    <script>
+        function showExercise(exerciseNumber) {
+            const exerciseContainer = document.getElementById("exercise-container");
+            exerciseContainer.innerHTML = ""; // Limpiar el contenedor
+
+            switch (exerciseNumber) {
+                case 1:
+                    // Ejercicio 1 - IMC
+                    exerciseContainer.innerHTML = `
+                        <h2>Ejercicio 1 - IMC (Índice de Masa Corporal)</h2>
+                        <p>Introduzca su peso (kg): <input type="text" id="weight"></p>
+                        <p>Introduzca su altura (m): <input type="text" id="height"></p>
+                        <button onclick="calculateBMI()">Calcular BMI</button>
+                        <p id="bmi-result"></p>
+                    `;
+                    break;
+                case 2:
+                    // Ejercicio 2 - Número de Likes
+                    exerciseContainer.innerHTML = `
+                        <h2>Ejercicio 2 - Número de Likes</h2>
+                        <p>Introduzca un número: <input type="text" id="likes-number"></p>
+                        <button onclick="formatLikes()">Formato Likes</button>
+                        <p id="likes-result"></p>
+                    `;
+                    break;
+                case 3:
+                    // Ejercicio 3 - Contraseña Válida
+                    exerciseContainer.innerHTML = `
+                        <h2>Ejercicio 3 - Contraseña Válida</h2>
+                        <form>
+                            <p>Usuario: <input type="text" id="username"></p>
+                            <p>Contraseña: <input type="password" id="password"></p>
+                            <button onclick="validatePassword()">Iniciar Sesión</button>
+                            <p id="login-result"></p>
+                        </form>
+                    `;
+                    break;
+                case 4:
+                    // Ejercicio 4 - Cálculo de Impuestos
+                    exerciseContainer.innerHTML = `
+                        <h2>Ejercicio 4 - Cálculo de Impuestos</h2>
+                        <p>Edad: <input type="text" id="age"></p>
+                        <p>Ingresos: <input type="text" id="income"></p>
+                        <button onclick="calculateTaxes()">Calcular Impuestos</button>
+                        <p id="taxes-result"></p>
+                    `;
+                    break;
+                case 5:
+                    // Ejercicio 5 - Imprimir un Arreglo
+                    exerciseContainer.innerHTML = `
+                        <h2>Ejercicio 5 - Imprimir un Arreglo</h2>
+                        <p>Ingrese elementos separados por comas: <input type="text" id="array-input"></p>
+                        <button onclick="printArray()">Imprimir</button>
+                        <ul id="array-result"></ul>
+                    `;
+                    break;
+                case 6:
+                    // Ejercicio 6 - Número de Caracteres
+                    exerciseContainer.innerHTML = `
+                        <h2>Ejercicio 6 - Número de Caracteres</h2>
+                        <p>Ingrese una cadena de texto: <input type="text" id="text-input"></p>
+                        <p>Ingrese un carácter: <input type="text" id="char-input"></p>
+                        <button onclick="countCharacters()">Contar Caracteres</button>
+                        <p id="char-count"></p>
+                    `;
+                    break;
+                case 7:
+                    // Ejercicio 7 - Sumar Arreglo
+                    exerciseContainer.innerHTML = `
+                        <h2>Ejercicio 7 - Sumar Arreglo</h2>
+                        <p>Ingrese números separados por comas: <input type="text" id="numbers-input"></p>
+                        <button onclick="sumArray()">Sumar</button>
+                        <p id="sum-result"></p>
+                    `;
+                    break;
+                case 8:
+                    // Ejercicio 8 - Multiplicar Arreglo
+                    exerciseContainer.innerHTML = `
+                        <h2>Ejercicio 8 - Multiplicar Arreglo</h2>
+                        <p>Ingrese números separados por comas: <input type="text" id="numbers-input"></p>
+                        <button onclick="multiplyArray()">Multiplicar</button>
+                        <p id="multiply-result"></p>
+                    `;
+                    break;
+                case 9:
+                    // Ejercicio 9 - Sumar Arreglo entre Rango
+                    exerciseContainer.innerHTML = `
+                        <h2>Ejercicio 9 - Sumar Arreglo entre Rango</h2>
+                        <p>Ingrese números separados por comas: <input type="text" id="numbers-input"></p>
+                        <p>Inicio del rango: <input type="text" id="start-input"></p>
+                        <p>Fin del rango: <input type="text" id="end-input"></p>
+                        <button onclick="sumArrayRange()">Sumar en Rango</button>
+                        <p id="range-sum-result"></p>
+                    `;
+                    break;
+                case 10:
+                    // Ejercicio 10 - Encontrar el número máximo
+                    exerciseContainer.innerHTML = `
+                        <h2>Ejercicio 10 - Encontrar el número máximo</h2>
+                        <p>Ingrese números separados por comas: <input type="text" id="numbers-input"></p>
+                        <button onclick="findMax()">Encontrar Máximo</button>
+                        <p id="max-result"></p>
+                    `;
+                    break;
+                default:
+                    exerciseContainer.innerHTML = "<p>Selecciona un ejercicio para empezar.</p>";
+            }
+        }
+
+        // Funciones para cada ejercicio...
+
+        function calculateBMI() {
+            // Implementar la lógica para calcular el IMC y mostrar el resultado
+        }
+
+        function formatLikes() {
+            // Implementar la lógica para formatear el número de Likes y mostrar el resultado
+        }
+
+        function validatePassword() {
+            // Implementar la lógica para validar la contraseña
+        }
+
+        function calculateTaxes() {
+            // Implementar la lógica para calcular los impuestos
+        }
+
+        function printArray() {
+            // Implementar la lógica para imprimir un arreglo como una lista
+        }
+
+        function countCharacters() {
+            // Implementar la lógica para contar caracteres en una cadena de texto
+        }
+
+        function sumArray() {
+            // Implementar la lógica para sumar los elementos de un arreglo
+        }
+
+        function multiplyArray() {
+            // Implementar la lógica para multiplicar los elementos de un arreglo
+        }
+
+        function sumArrayRange() {
+            // Implementar la lógica para sumar elementos de un arreglo en un rango específico
+        }
+
+        function findMax() {
+            // Implementar la lógica para encontrar el número máximo en un arreglo
+        }
+    </script>
+</body>
+</html>
