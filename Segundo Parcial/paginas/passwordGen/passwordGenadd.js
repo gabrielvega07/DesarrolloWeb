@@ -6,8 +6,6 @@ function addEventListenerById(id, event, fn) {
     document.getElementById(id).addEventListener(event, fn);
     }
 
-//addEventListenerById('generar', 'click', () => generarContrasena());
-
 addEventListenerById('generar', 'click', () => {
     const nuevaContrasena = generarContrasena(32, 'abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789*/?#$%&');
     alert('Su nuvea contraseña es: ' + nuevaContrasena);

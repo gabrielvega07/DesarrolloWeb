@@ -1,7 +1,7 @@
 import {sumar, restar, multiplicar, dividir} from '../../module/aggregator.js';
 
 
-function realizarOperacion(operacion) {
+function operar(operacion) {
     const num1 = parseFloat(document.getElementById('num1').value);
     const num2 = parseFloat(document.getElementById('num2').value);
     
@@ -30,8 +30,8 @@ function realizarOperacion(operacion) {
     document.getElementById(id).addEventListener(event, fn);
     }
   // Asigna las funciones a los botones correspondientes
-  addEventListenerById('sumarButton', 'click', () => realizarOperacion('sumar'));
-  addEventListenerById('restarButton', 'click', () => realizarOperacion('restar'));
-  addEventListenerById('multiplicarButton', 'click', () => realizarOperacion('multiplicar'));
-  addEventListenerById('dividirButton', 'click', () => realizarOperacion('dividir'));
+  addEventListenerById('sumarButton', 'click', () => operar('sumar'));
+  addEventListenerById('restarButton', 'click', () => operar('restar'));
+  addEventListenerById('multiplicarButton', 'click', () => operar('multiplicar'));
+  addEventListenerById('dividirButton', 'click', () => operar('dividir'));
   

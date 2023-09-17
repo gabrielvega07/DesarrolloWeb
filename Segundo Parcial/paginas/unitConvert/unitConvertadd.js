@@ -1,4 +1,4 @@
-// Importa las funciones de conversión del módulo
+
 import { celsiusToFahrenheit, fahrenheitToCelsius } from '../../module/aggregator.js';
 
 document.addEventListener('DOMContentLoaded', function () {
