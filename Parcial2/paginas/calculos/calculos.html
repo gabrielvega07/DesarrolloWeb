@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Calculadora</title>
+  <link rel="stylesheet" type="text/css" href="/css/bootstrap.css"> <!-- Vincula el archivo CSS -->
+</head>
+<body>
+  <script type="module" src="calculoadd.js"></script>
+
+  <div class="p-3 mb-2 bg-primary-subtle text-emphasis-primary">
+
+  <div class="p-3 mb-2 bg-primary-subtle text-emphasis-primary" style="display: flex; justify-content: center; align-items: center;">
+    <h1>Modulo de Calculos</h1>
+  </div>
+  
+  <h3>Ingresar numeros para operar: </h3>
+  <div style="margin-left: 10px; margin-right: 1200px;">
+    <form class="form-floating">
+      <input type="number" class="form-control small-input" id="num1" placeholder="Numero 1">
+      <label for="num1" style="font-size: 16px;">Numero 1:</label>
+    </form>
+  
+  </div>
+
+  <div style="margin-left: 10px; margin-right: 1200px;">
+    <form class="form-floating">
+      <input type="number" class="form-control small-input" id="num2" placeholder="Numero 2">
+      <label for="num2" style="font-size: 16px;">Numero 2:</label>
+    </form>
+  </div>
+
+  <p></p>
+  
+  <!-- Botones para operaciones matemáticas -->
+<div class="container-sm" style="padding: 0%;">
+    <button type="button" class="btn btn-primary" id="sumarButton">Sumar</button>
+    <button type="button" class="btn btn-primary" id="restarButton">Restar</button>
+    <button type="button" class="btn btn-primary" id="multiplicarButton">Multiplicar</button>
+    <button type="button" class="btn btn-primary" id="dividirButton">Dividir</button>
+  </div>
+
+
+  <div class="alert alert-success" role="alert" style="top: 5px; grid-area: auto;">
+    <p><span id="resultado"></span></p>
+  </div>
+  <!-- Importa el archivo JavaScript principal -->
+
+  <div class="p-3 mb-2 bg-dark text-white" style="height: 100vh; display: flex; justify-content: center; align-items: center;">
+  <img src="/imagenes/calculos-min.png" alt="auto">
+  </div>
+</div>
+
+</body>
+</html>

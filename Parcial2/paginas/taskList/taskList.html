@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista de Tareas</title>
+  <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css"> <!-- Vincula el archivo CSS -->
+</head>
+<body>
+  <script type="module" src="taskListadd.js"></script>
+  <h1>Lista de Tareas</h1>
+  
+  <div class="container">
+  <!-- Formulario para agregar una nueva tarea -->
+  <form id="formularioTarea">
+    <input type="text" id="nuevaTarea" placeholder="Nueva tarea" required>
+    <button type="submit">Agregar</button>
+  </form>
+</div>
+  <!-- Lista de tareas 
+  <ul id="listaTareas"></ul> -->
+  <!-- Importa el archivo JavaScript principal -->
+  <ul class="list-group">
+    <li class="list-group-item disabled" aria-disabled="true" id="listaTareas">A disabled item</li>
+  </ul>
+  
+</body>
+</html>
