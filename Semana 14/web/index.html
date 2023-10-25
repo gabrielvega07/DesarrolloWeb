@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consumir API de Libros</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"></head>
+<body>
+    <h1 class="bg-dark text-white p-3">Listado de Libros</h1>
+
+    <div id="libros-list" style="display: flex; align-items: center; margin-left: 50px;"></div>
+
+    <div style="margin-top: 20px;">
+        <h2 class="bg-black text-white p-3">Agregar Nuevo Libro</h2>
+        <form id="libro-form" class="libro-form">
+
+            <div class="container" style="align-items: center;">
+                <div class="mb-3">
+                    <input type="text" class="form-control" placeholder="Título" id="titulo">
+                </div>
+        
+                <div class="mb-3">
+                    <input type="text" class="form-control" placeholder="Autor" id="autor">
+                </div>
+        
+                <div class="mb-3">
+                    <input type="text" class="form-control" placeholder="Año de Publicación" id="añoPublicacion">
+                </div>
+        
+                <div class="mb-3">
+                    <input type="text" class="form-control" placeholder="ISBN" id="isbn">
+                </div>
+        
+                <div class="mb-3">
+                    <input type="text" class="form-control" placeholder="Género" id="genero">
+                </div>
+                <button type="submit" class="btn btn-primary">Agregar Libro</button>
+            </div>
+        </form>
+    </div>
+    
+    <script src="./script/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+[
+    {
+        "titulo": "El Gran Gatsby",
+        "autor": "F. Scott Fitzgerald",
+        "añoPublicacion": "1925",
+        "isbn": "978-3-16-148410-0",
+        "genero": "Novela"
+    },
+    {
+        "titulo": "Cien años de soledad",
+        "autor": "Gabriel García Márquez",
+        "añoPublicacion": "1967",
+        "isbn": "978-0-06-088328-7",
+        "genero": "Realismo mágico"
+    },
+    {
+        "titulo": "To Kill a Mockingbird",
+        "autor": "Harper Lee",
+        "añoPublicacion": "1960",
+        "isbn": "978-0-06-112008-4",
+        "genero": "Ficción"
+    }
+]
